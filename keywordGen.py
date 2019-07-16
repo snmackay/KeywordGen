@@ -2,6 +2,7 @@ import subprocess
 import sys
 import PyPDF2
 import textract
+import operator
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
@@ -54,12 +55,16 @@ def generateKeyWords(keywords):
     wordsFreq={}
 
     for i in keywords:
-        if i in wordsFreq:
+        if j in wordsFreq:
             wordsFreq[i]+=1
         else:
             wordsFreq[i]=1
 
-    return wordsFreq
+    sorted_k = sorted(wordsFreq.items(), key=operator.itemgetter(1))
+    correctList=sorted_k.reverse()
+    top20=correctList[:20]
+
+    return top20
 
 def main(directory):
     install()
@@ -72,9 +77,17 @@ def main(directory):
         pdfs[i]=generateKeywords(keywords)
         print("Done "+i)
 
+    file1 = open("KeywordsForPapers.txt","a")
+
     for j in pdfs:
-        for k in pdfs[j]
-        
+        file1.writeline(" ")
+        file1.write(j)
+        file1.writelines(pdfs[j])
+        file1.writeline(" ")
+
+    file1.close()
+    return 69
+
 
 
 
