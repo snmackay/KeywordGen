@@ -1,7 +1,21 @@
 # KeywordGen
 A keyword generator for academic papers. It will compare given keywords to actual most frequent relevant words.
 
+Step 1:
+ensure you have Python 3 installed as well as the pip package manager
 
+Step 2: 
+Run the python ide interpreter by typing "python" from the ide. 
+
+Step 3: 
+Type in the following:
+import nltk
+nltk.download()
+
+when a window pops up select all from the options then download
+
+Step 4: 
+Run the below commands in the order specified. 
 
 python3 keywordGen.py
   634  pip install PyPDF2

@@ -1,16 +1,15 @@
 import subprocess
 import sys
+import os
 import PyPDF2
 import textract
 import operator
-from nltk.tokenize import word_tokenize
+from os import listdir
+from os.path import isfile, join
+import nltk
+from nltk import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 
-#Installs required packages
-def install():
-    subprocess.call([sys.executable, "-m", "pip", "install", "PyPDF2"])
-    subprocess.call([sys.executable, "-m", "pip", "install", "textract"])
-    subprocess.call([sys.executable, "-m", "pip", "install", "nltk"])
 
 def genFileList(directory):
     files=[]
@@ -24,15 +23,15 @@ def genFileList(directory):
     return files
 
 def processFile(fileName):
-    pdfFileObj = open(fileName,'rb')
-    pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 
-    num_pages = pdfReader.numPages
+    fileReader = PyPDF2.PdfFileReader(open(directory+"/"+fileName,'rb'))
+
+    num_pages = fileReader.numPages
     count = 0
     text = ""
 
     while count < num_pages:
-        pageObj = pdfReader.getPage(count)
+        pageObj = fileReader.getPage(count)
         count +=1
         text += pageObj.extractText()
 
@@ -48,14 +47,14 @@ def processFile(fileName):
 def processText(fileText):
     punctuations = ['(',')',';',':','[',']',',']
     stop_words = stopwords.words('english')
-    keywords = [word for word in tokens if not word in stop_words and not word in punctuations]
+    keywords = [word for word in fileText if not word in stop_words and not word in punctuations]
     return keywords
 
 def generateKeyWords(keywords):
     wordsFreq={}
 
     for i in keywords:
-        if j in wordsFreq:
+        if i in wordsFreq:
             wordsFreq[i]+=1
         else:
             wordsFreq[i]=1
@@ -67,14 +66,13 @@ def generateKeyWords(keywords):
     return top20
 
 def main(directory):
-    install()
     files=genFileList(directory)
 
     pdfs={}
     for i in files:
         tokens=processFile(i)
         keywords=processText(tokens)
-        pdfs[i]=generateKeywords(keywords)
+        pdfs[i]=generateKeyWords(keywords)
         print("Done "+i)
 
     file1 = open("KeywordsForPapers.txt","a")
@@ -87,10 +85,6 @@ def main(directory):
 
     file1.close()
     return 69
-
-
-
-
 
 
 if "__name__==__main__":
