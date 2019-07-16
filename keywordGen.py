@@ -50,5 +50,36 @@ def processText(fileText):
     keywords = [word for word in tokens if not word in stop_words and not word in punctuations]
     return keywords
 
-def generateKeyWords():
-    
+def generateKeyWords(keywords):
+    wordsFreq={}
+
+    for i in keywords:
+        if i in wordsFreq:
+            wordsFreq[i]+=1
+        else:
+            wordsFreq[i]=1
+
+    return wordsFreq
+
+def main(directory):
+    install()
+    files=genFileList(directory)
+
+    pdfs={}
+    for i in files:
+        tokens=processFile(i)
+        keywords=processText(tokens)
+        pdfs[i]=generateKeywords(keywords)
+        print("Done "+i)
+
+    for j in pdfs:
+        for k in pdfs[j]
+        
+
+
+
+
+
+if "__name__==__main__":
+    directory= str(sys.argv[1])
+    main(directory)
