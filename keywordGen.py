@@ -12,7 +12,7 @@ def install():
     subprocess.call([sys.executable, "-m", "pip", "install", "textract"])
     subprocess.call([sys.executable, "-m", "pip", "install", "nltk"])
 
-def genFileList():
+def genFileList(directory):
     files=[]
     for filename in os.listdir(directory):
         if filename.endswith(".pdf"):
