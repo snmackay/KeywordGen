@@ -23,6 +23,7 @@ Run the below commands in the order specified.
 5: pip install pocketsphinx
 6: pip install textract
 7: pip install six --upgrade
-8: python3 keywordGen.py 'directory you have the pdf's in'
+8: pip install pdfminer.six
+9: python3 keywordGen.py 'directory you have the pdf's in'
 
 Step 5: Enjoy!
