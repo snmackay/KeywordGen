@@ -4,6 +4,7 @@ import os
 import PyPDF2
 import textract
 import operator
+import itertools
 from os import listdir
 from os.path import isfile, join
 import nltk
@@ -60,8 +61,7 @@ def generateKeyWords(keywords):
             wordsFreq[i]=1
 
     sorted_k = sorted(wordsFreq.items(), key=operator.itemgetter(1))
-    correctList=sorted_k.reverse()
-    top20=correctList[:20]
+    top20=sorted_k[20:]
 
     return top20
 
@@ -75,13 +75,12 @@ def main(directory):
         pdfs[i]=generateKeyWords(keywords)
         print("Done "+i)
 
-    file1 = open("KeywordsForPapers.txt","a")
-
-    for j in pdfs:
-        file1.writeline(" ")
-        file1.write(j)
-        file1.writelines(pdfs[j])
-        file1.writeline(" ")
+    with open("KeywordsForPapers.txt","a") as file1:
+        for j in pdfs:
+            file1.write(" ")
+            file1.write(j)
+            file1.write('\n'.join('%s %s' % x for x in pdfs[j]))
+            file1.write(" ")
 
     file1.close()
     return 69
