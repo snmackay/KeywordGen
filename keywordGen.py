@@ -46,7 +46,7 @@ def processFile(fileName):
     return tokens
 
 def processText(fileText):
-    punctuations = ['(',')',';',':','[',']',',']
+    punctuations = ['(',')',';',':','[',']',',','?','.','!','-','_']
     stop_words = stopwords.words('english')
     keywords = [word for word in fileText if not word in stop_words and not word in punctuations]
     return keywords
@@ -61,12 +61,13 @@ def generateKeyWords(keywords):
             wordsFreq[i]=1
 
     sorted_k = sorted(wordsFreq.items(), key=operator.itemgetter(1))
-    top20=sorted_k[20:]
+    top20=sorted_k[-20:]
 
     return top20
 
 def main(directory):
     files=genFileList(directory)
+    os.remove("KeywordsForPapers.txt")
 
     pdfs={}
     for i in files:
@@ -79,6 +80,7 @@ def main(directory):
         for j in pdfs:
             file1.write(" ")
             file1.write(j)
+            file1.write('\n')
             file1.write('\n'.join('%s %s' % x for x in pdfs[j]))
             file1.write(" ")
 
