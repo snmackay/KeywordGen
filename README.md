@@ -4,34 +4,25 @@ A keyword generator for academic papers. It will compare given keywords to actua
 Step 1:
 ensure you have Python 3 installed as well as the pip package manager
 
-Step 2: 
-Run the python ide interpreter by typing "python" from the ide. 
+Step 2:
+Run the python ide interpreter by typing "python" from the ide.
 
-Step 3: 
+Step 3:
 Type in the following:
 import nltk
 nltk.download()
 
 when a window pops up select all from the options then download
 
-Step 4: 
-Run the below commands in the order specified. 
+Step 4:
+Run the below commands in the order specified.
+1: pip install PyPDF2
+2: sudo apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
+3: sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
+4:  sudo apt-get install libasound2-dev
+5: pip install pocketsphinx
+6: pip install textract
+7: pip install six --upgrade
+8: python3 keywordGen.py 'directory you have the pdf's in'
 
-python3 keywordGen.py
-  634  pip install PyPDF2
-  635  python3 keywordGen.py
-  636  pip install textract
-  637  python3 keywordGen.py
-  638  pip install six 1.11.0
-  639  pip install six
-  640  pip update siex
-  641  pip update six
-  642  sudo pip install six --upgrade
-  643  apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
-  644  sudo apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
-  645  pip install textract
-  646  sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
-  647  pip install pocketsphinx
-  648  sudo apt-get install libasound2-dev
-  649  pip install pocketsphinx
-  650  pip install textract
+Step 5: Enjoy!
