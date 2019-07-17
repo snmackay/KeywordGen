@@ -19,7 +19,7 @@ Run the below commands in the order specified.
 1: pip install PyPDF2
 2: sudo apt-get install python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
 3: sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
-4:  sudo apt-get install libasound2-dev
+4: sudo apt-get install libasound2-dev
 5: pip install pocketsphinx
 6: pip install textract
 7: pip install six --upgrade
