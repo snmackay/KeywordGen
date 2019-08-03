@@ -61,7 +61,7 @@ def generateKeyWords(keywords):
             wordsFreq[i]=1
 
     sorted_k = sorted(wordsFreq.items(), key=operator.itemgetter(1))
-    top30=sorted_k[-30:]
+    top30=sorted_k[-30:] #[:30]
 
     return top30
 
@@ -92,5 +92,6 @@ def main(directory):
     return 69
 
 if "__name__==__main__":
-    directory= str(sys.argv[1])
+    directory= str(sys.path[0])
+    directory=directory+"/papers"
     main(directory)

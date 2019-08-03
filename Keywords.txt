@@ -30,35 +30,3 @@ criminal 6
 research 10
 employment 13
 
-FILENAME: a20-lakanen.pdf
-lakanen 20
-activities 20
-individual 20
-engagement 20
-even 20
-learning 24
-science 27
-school 28
-also 29
-transactions 30
-january 30
-career 30
-publication 31
-article 33
-new 33
-impact 34
-would 34
-games 36
-workshop 37
-game 43
-category 43
-study 44
-computing 57
-computer 62
-outreach 79
-programming 81
-student 84
-interest 97
-cs 116
-students 152
-
