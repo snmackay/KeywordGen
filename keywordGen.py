@@ -1,7 +1,6 @@
 import subprocess
 import sys
 import os
-import PyPDF2
 import textract
 import operator
 import itertools
@@ -20,22 +19,18 @@ def genFileList(directory):
     files=[]
     for filename in os.listdir(directory):
         if filename.endswith(".pdf"):
-            # print(os.path.join(directory, filename))
             files.append(filename)
         else:
             continue
-
     return files
 
 def processFile(fileName):
-
     fp = open(directory+'/'+fileName, 'rb')
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
     device = PDFPageAggregator(rsrcmgr, laparams=laparams)
     interpreter = PDFPageInterpreter(rsrcmgr, device)
     pages = PDFPage.get_pages(fp)
-
     textblock=""
     for page in pages:
         print('Processing next page...')
@@ -45,8 +40,6 @@ def processFile(fileName):
             if isinstance(lobj, LTTextBox):
                 x, y, text = lobj.bbox[0], lobj.bbox[3], lobj.get_text()
                 textblock+=text
-
-    print(textblock)
     return textblock
 
 def processText(textblock):
@@ -68,9 +61,13 @@ def generateKeyWords(keywords):
             wordsFreq[i]=1
 
     sorted_k = sorted(wordsFreq.items(), key=operator.itemgetter(1))
-    top30=sorted_k[-30:]
+    top30=sorted_k[-30:] #[:30]
 
     return top30
+
+def getProvidedWords(tokens):
+    tokens=textblock.split(" ")
+    tokens = [w.lower() for w in tokens]
 
 def main(directory):
     files=genFileList(directory)
@@ -95,5 +92,6 @@ def main(directory):
     return 69
 
 if "__name__==__main__":
-    directory= str(sys.argv[1])
+    directory= str(sys.path[0])
+    directory=directory+"/papers"
     main(directory)
