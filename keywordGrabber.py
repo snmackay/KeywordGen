@@ -17,16 +17,23 @@ from pdfminer.converter import PDFPageAggregator
 import numpy as np
 
 def genFileList(directory): #creates the list of files to be parsed
-    files=[]
-    for filename in os.listdir(directory):
-        if filename.endswith(".pdf"):
-            files.append(filename)
-        else:
-            continue
-    return files
+    # create a list of file and sub directories
+    # names in the given directory
+    listOfFile = os.listdir(directory)
+    allFiles = list()
+    # Iterate over all the entries
+    for entry in listOfFile:
+        # Create full path
+        fullPath = os.path.join(directory, entry)
+        # If entry is a directory then get the list of files in this directory
+        if os.path.isdir(fullPath):
+            allFiles = allFiles + genFileList(fullPath)
+        elif fullPath.endswith(".pdf"):
+            allFiles.append(fullPath)
+    return allFiles
 
 def processFile(fileName): #processes text into a readable stream
-    fp = open(directory+'/'+fileName, 'rb')
+    fp = open(fileName, 'rb')
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
     device = PDFPageAggregator(rsrcmgr, laparams=laparams)
@@ -46,42 +53,87 @@ def processFile(fileName): #processes text into a readable stream
 def processText(textblock): #removes garbage text
     tokens=textblock.split(" ")
     tokens = [w.lower() for w in tokens]
-    tooShort=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    stop_words = stopwords.words('english')
-    keywords = [word for word in tokens if not word in stop_words and not word in tooShort]
-    keywords = [word for word in keywords if word.isalpha()]
-    return keywords
+    return tokens
 
-def findKeyword(keywords): #finds the first 30 words after the first occurance of "keywords"
-    counter=0
-    for i in keywords:
-        if i=="keywords":
-            ind_pos=[]
-            for k in range(counter,counter+1):
-                ind_pos.append(k)
+def findKeyword(keywords,stringy): #finds the first 30 words after the first occurance of "keywords"
 
-            arr=keywords[ind_pos]
-            return arr
 
-        if i=="keyword":
-            ind_pos=[]
-            for k in range(counter,counter+1):
-                ind_pos.append(k)
+    open('temp.txt', 'w').close()
+    with open("temp.txt","a") as file1:
+        for i in keywords:
+                file1.write(i)
+                file1.write('\n')
 
-            arr=keywords[ind_pos]
-            return arr
+        file1.close()
 
-        if i=="keywords:":
-            ind_pos=[]
-            for k in range(counter,counter+1):
-                ind_pos.append(k)
+    with open("temp.txt") as f:
+        content = f.readlines()
+        content = [x.strip() for x in content]
+    f.close()
+    print(stringy)
+    if stringy=="cse":
+        counter=0
+        for j in content:
+            #print(type(j))
+            if j=="keywords":
+                ind_pos=[]
+                for k in range(counter,counter+30):
+                    ind_pos.append(content[k])
+                combo="".join(ind_pos)
+                combo=combo.split(";")
+                returner=[]
+                for k in combo:
+                    returner.append(k)
+                    combo.remove(k)
 
-            arr=keywords[ind_pos]
-            return arr
+                return returner
 
-        else:
+            elif j=="keyword":
+                ind_pos=[]
+                for k in range(counter,counter+30):
+                    ind_pos.append(content[k])
+                combo="".join(ind_pos)
+                combo=combo.split(";")
+                returner=[]
+                for k in combo:
+                    returner.append(k)
+                    combo.remove(k)
+                return returner
+
+            elif j=="keywords:":
+                ind_pos=[]
+                for k in range(counter,counter+30):
+                    ind_pos.append(content[k])
+                combo="".join(ind_pos)
+                combo=combo.split(";")
+                returner=[]
+                for k in combo:
+                    returner.append(k)
+                    combo.remove(k)
+                return returner
             counter+=1
-            continue
+    else:
+        counter=0
+        for j in content:
+            #print(type(j))
+            if j=="keywords":
+                ind_pos=[]
+                for k in range(counter,counter+30):
+                    ind_pos.append(content[k])
+                return ind_pos
+
+            elif j=="keyword":
+                ind_pos=[]
+                for k in range(counter,counter+30):
+                    ind_pos.append(content[k])
+                return ind_pos
+
+            elif j=="keywords:":
+                ind_pos=[]
+                for k in range(counter,counter+30):
+                    ind_pos.append(content[k])
+                return ind_pos
+            counter+=1
 
 def main(directory): #control/print function
     files=genFileList(directory)
@@ -91,17 +143,39 @@ def main(directory): #control/print function
     for i in files:
         tokens=processFile(i)
         keywords=processText(tokens)
-        pdfs[i]=findKeyword(keywords)
+        #no switch statement native so here are cases for paper types
+        if("/CSE/" in i):
+            pdfs[i]=findKeyword(keywords,"cse")
+        elif("/EDUCON/" in i):
+            pdfs[i]=findKeyword(keywords,"educon")
+        elif("/FIE/" in i):
+            pdfs[i]=findKeyword(keywords,"fie")
+        elif("/ICER/" in i):
+            pdfs[i]=findKeyword(keywords,"icer")
+        elif("/ITiCSE/" in i):
+            pdfs[i]=findKeyword(keywords,"iticse")
+        elif("/JECR/" in i):
+            pdfs[i]=findKeyword(keywords,"jecr")
+        elif("/Koli/" in i):
+            pdfs[i]=findKeyword(keywords,"koli")
+        elif("/SIGCSE/" in i):
+            pdfs[i]=findKeyword(keywords,"sigcse")
+        elif("/TOCE/" in i):
+            pdfs[i]=findKeyword(keywords,"toce")
+        elif("/TOE/" in i):
+            pdfs[i]=findKeyword(keywords,"toe")
+        elif("/WiPCSE/" in i):
+            pdfs[i]=findKeyword(keywords,"wipcse")
+        else:
+            pdfs[i]=findKeyword(keywords,"none")
         print("Done "+i)
 
-    if None not in pdfs.values():
         with open("ProvidedKeywords.txt","a") as file1:
             for j in pdfs:
-                file1.write("FILENAME: "+j)
-                file1.write('\n')
-                file1.write('\n'.join('%s %s' % x for x in pdfs[j]))
-                file1.write('\n')
-                file1.write('\n')
+                if pdfs[j]!=None:
+                    file1.write("FILENAME: "+j)
+                    for item in pdfs[j]:
+                        file1.write("%s\n" % item)
 
         file1.close()
     return 69
