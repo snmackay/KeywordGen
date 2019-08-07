@@ -1,0 +1,288 @@
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/630 Including part-whole-thinking in a girls_ engineering course through the use of littleBits A practical report on including part-whole-thinking into the content of computer science education,.pdf
+    keywords—part-whole-thinking
+     computer  science  educa-  tion
+    engineering education
+    gender
+    rapid prototyping  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/620 Learning programming through design An analysis of parametric design projects in digital fabrication labs and an online makerspace.pdf
+    keywords—digital  fabrication
+     programming
+     computer science education
+    parametric design
+    3d printing
+     
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/609 Development and assessment of computational thinking A methodological proposal and a support tool.pdf
+    keywords—computational thinking
+    problem solving
+    21st  century skills
+    methodology for development and assessment
+     pre-university education
+    web platform
+    abstractly.  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/616 Agile projects to foster cooperative learning in heterogeneous classes.pdf
+    keywords—agile  methods
+     computer  science  education
+     k-12
+     cooperative  individual  differences
+     learning
+     project–based  learning
+    heterogeneity
+    
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/608 Designing IoT applications in lower secondary schools,.pdf
+    keywords—internet  of  things
+     lower  secondary  education
+     computing education
+    ubiquitous computing i
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/612 Exploring digital careers, stereotypes and diversity with young people through game design and implementation.pdf
+    keywords— computer science
+    digital games
+    diversity
+    gender  stereotype
+    culture  stereotype
+     career  aspiration
+     young  people
+     stem
+    digital sector 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/675 Discovering children_s competences in coding through the analysis of Scratch projects.pdf
+    keywords—computer  science  education
+     maker  movement
+     coding
+    computantional thinking
+    constructionism 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/623 Coding, playgrounds and literacy in early childhood education The development of KIBO robotics and ScratchJr.pdf
+    keywords—coding
+    early childhood
+    robotics
+    computational  thinking
+    programming
+    young children
+    education  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/629 On computational thinking as a universal skill A review of the latest research on this ability.pdf
+    keywords—computational  thinking
+     programming
+     skills
+    computer science education
+    digital literacy.  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2018/626 Computational thinking through modeling in language lessons.pdf
+    keywords—computational  language learning thinking
+    modeling
+    education
+    
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2014/400 Transition Using.pdf
+    keywords— computer science education
+    programming
+     curriculum
+    motivation
+    computer languages
+    appinventor
+    scratch  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2014/399 Using App Inventor.pdf
+    keywords— summer camp
+    attracting high school girls
+    app  inventor
+     android
+     lego  mindstorm  nxt
+     outreach
+     engineering education   
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2014/414 Computing Education in K-12 Schools A Review of the Literature.pdf
+    keywords—computer  computer  programming
+     programming  pedagogy
+     educational  context
+    programming tools
+    k-12 education.  education
+     science  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2015/414 Computing Education in K-12 Schools A Review of the Literature.pdf
+    keywords—computer  computer  programming
+     programming  pedagogy
+     educational  context
+    programming tools
+    k-12 education.  education
+     science  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2013/398 Increasing High School Girls Awareness.pdf
+    keywords-high  school  girls
+     computer  science  education
+    summer camp
+    outreach
+    underrepresented  introduction 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/434 COMPUGIRLS.pdf
+    keywords gender
+    adolescents
+    computer-based technology enrichment
+    latent growth modeling
+    academic possible selves
+    self-regulation 1t. denny sanford school of social and family dynamics
+    arizona state university
+    tempe
+    az
+    usa 2school of
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/552 Programming Basics for Beginners.pdf
+    keywords— programming basics
+    beginners
+    scratch
+    python
+     vba 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/570 Programming in Secondary Education.pdf
+    keywords—programming
+     educational  robotics
+     visualization
+    sonification  ι. introduction  programming  learning  programming  in  there  are  many  alternatives  which 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/532 Computer Science Learning.pdf
+    keywords—  cognitive  engagement;,  experience  avctivities
+     discovery learning.  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/410 07474656.pdf
+    keywords—  computer  science
+     k–12
+     style
+     curriculum
+     knowledge based economy  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/530 Local communities.pdf
+    keywords— ubiquitous computing
+    mobile computing
+    internet  of things (iot)
+    stem education
+    local communities 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/529 Reviewing the Affordances.pdf
+    keywords—tangible programming languages
+    k-12 education
+    affordances 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/415 07474582.pdf
+    keywords—app  inventor  2
+     programming
+     mobile  app
+     summer workshop
+    learning improvement  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/567 Home-made Robotic Education.pdf
+    keywords— robotic;, education
+    stem
+    introduction 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/547 A Design and Evaluation Framework.pdf
+    keywords— evaluation  framework
+     criteria
+     visual  programming languages
+    
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/531 Critical Computational Empowerment.pdf
+    keywords—computational  computational identity  thinking
+     digital  empowerment
+     
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/549 Designing Arduino Electronic.pdf
+    keywords- low-cost instruments
+    arduino
+    arduino shields
+    stem
+    undergraduate and secondary teaching 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/405 07096089.pdf
+    keywords—computer  programming
+     coding
+     english
+     technology- computational  thinking
+     educational  tool
+     enhanced learning    
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/403 06826237.pdf
+    keywords— lego mindstorms nxt  
+     educational  robotics
+     higher educatiuon  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/553 B@SE_ Blocks for Arduino.pdf
+    keywords—arduino
+     block-based  programming
+     physical  computing 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/404 07096019.pdf
+    keywords—engineering  education
+     secondary  schools
+     learning and teaching experiences introduction 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/571 Evaluation of _pupils_ laptop_.pdf
+    keywords—ict  in  education
+     pupil’s  computing
+    ict in education assesment   laptop
+     one-to-one  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/551 Fleas Caterpillars and Cockroaches.pdf
+    keywords—engineering  education
+     educational  stem
+    pre-college programs
+       robots
+    the  last  over  is  becoming  introduction  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/540 Analysis of Scratch.pdf
+    keywords—computer  science  education
+     primary  school
+     primary education
+    scratch
+    programming 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/550 An early introduction to STEM education.pdf
+    keywords—  e-learning  platform
+     stem  education
+     game- based learning
+    scratch
+    computer programming principles  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/435 07474623.pdf
+    keywords—  training  of  teachers
+     coding
+     computing
+     primary  and secondary school curriculum.  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/527 07943098.pdf
+    keywords—computer  science  education
+     stem  education
+     ubiquitous computing
+    mobile computing
+    internet of things 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/569 The Use of Lego Mindstorms.pdf
+    keywords— lego robots
+    teaching methods
+    pupils   interest  popular  introduction 
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/409 07474546.pdf
+    keywords—computational  literature review, learning
+      thinking,  scratch
+     systematic  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/422 07474683.pdf
+    keywords—education
+     cospace
+     rescue  robotics
+     computer  science
+    robocupjunior
+    curriculum
+    simulation  
+
+FILENAME: /home/sean/Dropbox/Summer Research/Adrianne Decker/Script/papers/EDUCON/2017/568 Teaching How to Program with a Playful Approach.pdf
+    keywords — edutainment
+     playful  learning
+     learning  how  to  program
+    success factors
+    
+

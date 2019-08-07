@@ -15,17 +15,24 @@ from pdfminer.pdfinterp import PDFResourceManager
 from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.converter import PDFPageAggregator
 
-def genFileList(directory):
-    files=[]
-    for filename in os.listdir(directory):
-        if filename.endswith(".pdf"):
-            files.append(filename)
-        else:
-            continue
-    return files
+def genFileList(directory): #creates the list of files to be parsed
+    # create a list of file and sub directories
+    # names in the given directory
+    listOfFile = os.listdir(directory)
+    allFiles = list()
+    # Iterate over all the entries
+    for entry in listOfFile:
+        # Create full path
+        fullPath = os.path.join(directory, entry)
+        # If entry is a directory then get the list of files in this directory
+        if os.path.isdir(fullPath):
+            allFiles = allFiles + genFileList(fullPath)
+        elif fullPath.endswith(".pdf"):
+            allFiles.append(fullPath)
+    return allFiles
 
 def processFile(fileName):
-    fp = open(directory+'/'+fileName, 'rb')
+    fp = open(fileName, 'rb')
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
     device = PDFPageAggregator(rsrcmgr, laparams=laparams)
@@ -65,9 +72,6 @@ def generateKeyWords(keywords):
 
     return top30
 
-def getProvidedWords(tokens):
-    tokens=textblock.split(" ")
-    tokens = [w.lower() for w in tokens]
 
 def main(directory):
     files=genFileList(directory)
