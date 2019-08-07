@@ -28,7 +28,7 @@ def genFileList(directory): #creates the list of files to be parsed
         # If entry is a directory then get the list of files in this directory
         if os.path.isdir(fullPath):
             allFiles = allFiles + genFileList(fullPath)
-        elif fullPath.endswith(".pdf"):
+        elif fullPath.endswith(".pdf") and fullPath not in allFiles:
             allFiles.append(fullPath)
     return allFiles
 
@@ -64,76 +64,37 @@ def findKeyword(keywords,stringy): #finds the first 30 words after the first occ
                 file1.write(i)
                 file1.write('\n')
 
+
         file1.close()
 
     with open("temp.txt") as f:
         content = f.readlines()
         content = [x.strip() for x in content]
     f.close()
-    print(stringy)
-    if stringy=="cse":
+    if stringy=="educon":
         counter=0
         for j in content:
-            #print(type(j))
-            if j=="keywords":
+
+            if "keywords" in j or "keyword" in j or "keywords:" in j:
                 ind_pos=[]
                 for k in range(counter,counter+30):
                     ind_pos.append(content[k])
-                combo="".join(ind_pos)
-                combo=combo.split(";")
+
+                combo=" ".join(ind_pos)
+                combo=combo.split("i.")
+                if(";" in combo[0]):
+                    combo=combo[0].split("; ")
+                else:
+                    combo=combo[0].split(", ")
                 returner=[]
                 for k in combo:
                     returner.append(k)
-                    combo.remove(k)
-
-                return returner
-
-            elif j=="keyword":
-                ind_pos=[]
-                for k in range(counter,counter+30):
-                    ind_pos.append(content[k])
-                combo="".join(ind_pos)
-                combo=combo.split(";")
-                returner=[]
-                for k in combo:
-                    returner.append(k)
-                    combo.remove(k)
-                return returner
-
-            elif j=="keywords:":
-                ind_pos=[]
-                for k in range(counter,counter+30):
-                    ind_pos.append(content[k])
-                combo="".join(ind_pos)
-                combo=combo.split(";")
-                returner=[]
-                for k in combo:
-                    returner.append(k)
-                    combo.remove(k)
+                temper=returner[0]
+                temper[:8]
+                returner[0]=temper
                 return returner
             counter+=1
-    else:
-        counter=0
-        for j in content:
-            #print(type(j))
-            if j=="keywords":
-                ind_pos=[]
-                for k in range(counter,counter+30):
-                    ind_pos.append(content[k])
-                return ind_pos
 
-            elif j=="keyword":
-                ind_pos=[]
-                for k in range(counter,counter+30):
-                    ind_pos.append(content[k])
-                return ind_pos
-
-            elif j=="keywords:":
-                ind_pos=[]
-                for k in range(counter,counter+30):
-                    ind_pos.append(content[k])
-                return ind_pos
-            counter+=1
 
 def main(directory): #control/print function
     files=genFileList(directory)
@@ -170,14 +131,15 @@ def main(directory): #control/print function
             pdfs[i]=findKeyword(keywords,"none")
         print("Done "+i)
 
-        with open("ProvidedKeywords.txt","a") as file1:
-            for j in pdfs:
-                if pdfs[j]!=None:
-                    file1.write("FILENAME: "+j)
-                    for item in pdfs[j]:
-                        file1.write("%s\n" % item)
+    with open("ProvidedKeywords.txt","a") as file1:
+        for j in pdfs:
+            if pdfs[j]!=None:
+                file1.write("FILENAME: "+j+"\n")
+                for item in pdfs[j]:
+                    file1.write("    "+"%s\n" % item )
+                file1.write("\n")
 
-        file1.close()
+    file1.close()
     return 69
 
 if "__name__==__main__":
