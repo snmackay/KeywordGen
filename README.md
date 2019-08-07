@@ -1,5 +1,5 @@
 # KeywordGen
-A keyword generator for academic papers. It will compare given keywords to actual most frequent relevant words.
+A keyword generator for academic papers. It will create text files containg both the provided keywords and the most frequently used words within the paper
 
 Step 1:
 ensure you have Python 3 installed as well as the pip package manager
@@ -24,6 +24,6 @@ Run the below commands in the order specified.
 6: pip install textract
 7: pip install six --upgrade
 8: pip install pdfminer.six
-9: python3 keywordGen.py 'directory you have the pdf's in'
+9: python3 pdfSanity.py 'directory you have the pdf's in'
 
 Step 5: Enjoy!
