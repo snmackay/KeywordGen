@@ -1,6 +1,7 @@
 # KeywordGen
 A keyword generator for academic papers. It will create text files containg both the provided keywords and the most frequently used words within the paper
 
+These steps are garunteed to work on Linux with a 64 bit install of python 3.7.4.
 Step 1:
 ensure you have Python 3 installed as well as the pip package manager
 
